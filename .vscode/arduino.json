@@ -1,0 +1,5 @@
+{
+    "port": "COM20",
+    "board": "arduino:avr:leonardo",
+    "sketch": "deej-master\\arduino\\deej-5-sliders-vanilla\\deej-5-sliders-vanilla.ino"
+}
