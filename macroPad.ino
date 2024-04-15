@@ -1,4 +1,4 @@
- #include <HID.h>
+#include <HID.h>
 #include <Keyboard.h>         // Mengimpor pustaka Keyboard untuk mengirim input keyboard
 #include <SoftwareSerial.h>   // SoftwareSerial module_bluetooth(0, 1); // pin RX | TX
 /*
@@ -17,8 +17,11 @@ const int ledPwm = 3;         // Pin LED PWM (D3)
 const int ledPin = 7;         // Pin LED (D7)
 const int switchPin1 = 4;     // Pin switch 1 (D4)
 const int switchPin2 = 6;     // Pin switch 2 (D5)
-const int potRot = 8;         // Deklarasi pin potensio (D8)
-const int potSlide1 = 9;      // deklarasi pin potensio (D6)
+//const int potRot = 8;         // Deklarasi pin potensio (D8)
+//const int potSlide1 = 9;      // deklarasi pin potensio (D6)
+const int NUM_SLIDERS = 2;
+const int analogInputs[NUM_SLIDERS] = {A0, A1}; //A2, A3, A10, A9, A8, A7};
+int analogSliderValues[NUM_SLIDERS];
 
 //buat fungsi BuzzerLed
 void buzzerLed(int onDelay, int offDelay) {
@@ -56,19 +59,55 @@ void switchTest() {
 }
 
 //fungsi controlPotensio
-void controlPotRot() {
-  int potValue1 = analogRead(potRot); // Baca nilai potensio
-  // Konversi nilai potensio ke rentang nilai PWM (0-255)
-  int pwmValue1 = map(potValue1, 0, 1023, 0, 255);
-  // Atur nilai PWM pada ledPwm sesuai dengan nilai potensio
-  analogWrite(ledPwm, pwmValue1);
+//void controlPotRot() {
+//  int potValue1 = analogRead(potRot); // Baca nilai potensio
+//  // Konversi nilai potensio ke rentang nilai PWM (0-255)
+//  int pwmValue1 = map(potValue1, 0, 1023, 0, 255);
+//  // Atur nilai PWM pada ledPwm sesuai dengan nilai potensio
+//  analogWrite(ledPwm, pwmValue1);
+//}
+//void controlPotSLide1() {
+//  int potValue2 = analogRead(potSlide1); // Baca nilai potensio
+//  // Konversi nilai potensio ke rentang nilai PWM (0-255)
+//  int pwmValue2 = map(potValue2, 0, 1023, 0, 255);
+//  // Atur nilai PWM pada ledPwm sesuai dengan nilai potensio
+//  analogWrite(ledPwm, pwmValue2);
+//}
+
+//buat fungsi update nilai slider
+void updateSliderValues() {
+  for (int i = 0; i < NUM_SLIDERS; i++) {
+     analogSliderValues[i] = analogRead(analogInputs[i]);
+  }
 }
-void controlPotSLide1() {
-  int potValue2 = analogRead(potSlide1); // Baca nilai potensio
-  // Konversi nilai potensio ke rentang nilai PWM (0-255)
-  int pwmValue2 = map(potValue2, 0, 1023, 0, 255);
-  // Atur nilai PWM pada ledPwm sesuai dengan nilai potensio
-  analogWrite(ledPwm, pwmValue2);
+
+//buat fungsi untuk mengirim nilai slider
+void sendSliderValues() {
+  String builtString = String("");
+
+  for (int i = 0; i < NUM_SLIDERS; i++) {
+    builtString += String((int)analogSliderValues[i]);
+
+    if (i < NUM_SLIDERS - 1) {
+      builtString += String("|");
+    }
+  }
+  
+  Serial.println(builtString);
+}
+
+//buat fungsi untuk print nilai slider
+void printSliderValues() {
+  for (int i = 0; i < NUM_SLIDERS; i++) {
+    String printedString = String("Slider #") + String(i + 1) + String(": ") + String(analogSliderValues[i]) + String(" mV");
+    Serial.write(printedString.c_str());
+
+    if (i < NUM_SLIDERS - 1) {
+      Serial.write(" | ");
+    } else {
+      Serial.write("\n");
+    }
+  }
 }
 //fungsi setup 
 void setup() {  
@@ -79,6 +118,10 @@ void setup() {
   pinMode(switchPin1, INPUT_PULLUP);    // Atur switchPin1 sebagai INPUT_PULLUP8 
   pinMode(switchPin2, INPUT_PULLUP);    // Atur switchPin2 sebagai INPUT_PULLUP
 
+// looping buat deklaras & isinisasi pin Analg untuk potensi
+  for (int i = 0; i < NUM_SLIDERS; i++) {
+      pinMode(analogInputs[i], INPUT);
+  }
 // inisiasi komunikasi
   Serial.begin(9600);                   // menginisialisasi komunikasi serial pada Arduino dengan kecepatan baudrate 9600 bits per detik
   Keyboard.begin();                     // Memulai komunikasi dengan komputer sebagai perangkat HID
@@ -93,6 +136,10 @@ void setup() {
 }
 void loop() {
   switchTest();
-  controlPotRot();
-  // controlPotSLide1();
+  updateSliderValues();
+  sendSliderValues(); // Actually send data (all the time)
+  // printSliderValues(); // For debug
+  delay(10);
+//  controlPotRot();
+//  controlPotSLide1();
 }

@@ -1,5 +1,5 @@
 {
-    "port": "COM20",
+    "port": "COM22",
     "board": "arduino:avr:leonardo",
-    "sketch": "deej-master\\arduino\\deej-5-sliders-vanilla\\deej-5-sliders-vanilla.ino"
+    "sketch": "macroPad.ino"
 }
