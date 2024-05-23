@@ -7,25 +7,31 @@
 # windows only - you can use 'system' to control the "system sounds" volume
 # important: slider indexes start at 0, regardless of which analog pins you're using!
 slider_mapping:
-  0: master                   # master mapping
-  1: chrome.exe               # Chrome
-  2: BH3.exe                  # Honkai Impact 3rd
-  3: GenshinImpact.exe        # Genshin Impact
-  4: StarRail.exe             # Star Rail
-  # 5: discord.exe              # discord
-  # 6: Valorant.exe             # Valorant
-  # 7: mic Realtex              # mic Utam
-  # 8: opsional an          
-    # - pathofexile_x64.exe
-    # - rocketleague.exe
+  0: master
+  1: chrome.exe
+  2:
+    - TIDALPlayer.exe
+  3:
+    - BH3.exe
+    - GenshinImpact.exe
+    - StarRail.exe
+    - DOOMEternalx64vk.exe
+    - VALORANT-Win64-Shipping.exe
+    - RiotClientServices.exe
+    - NeedForSpeedHeat.exe
+    - DeathStranding.exe
+    - PES2021.exe
+    - GrandChase.exe
+  4: discord.exe
+  5: mic
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
 invert_sliders: false
 
 # settings for connecting to the arduino board
-com_port: COM22
+com_port: COM17
 baud_rate: 9600
 
 # adjust the amount of signal noise reduction depending on your hardware quality
 # supported values are "low" (excellent hardware), "default" (regular hardware) or "high" (bad, noisy hardware)
-noise_reduction: high
+noise_reduction: default
