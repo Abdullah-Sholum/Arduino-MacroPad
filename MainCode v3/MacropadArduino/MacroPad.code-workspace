@@ -1,12 +1,12 @@
 {
-	"folders": [
-		{
-			"path": "../.."
-		},
-		{
-			"name": "MacropadArduino",
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../.."
+    },
+    {
+      "name": "MacropadArduino",
+      "path": "."
+    }
+  ],
+  "settings": {}
 }

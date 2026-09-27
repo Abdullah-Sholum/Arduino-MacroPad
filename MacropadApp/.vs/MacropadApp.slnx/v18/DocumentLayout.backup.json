@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\00-Project\\MacroPad\\MacropadApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\macropadapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\macropadapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\services\\audioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\services\\audioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\services\\serialservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\services\\serialservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\services\\iaudioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\services\\iaudioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|e:\\00-project\\macropad\\macropadapp\\macropadapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{54C62458-1439-2AEE-3199-F4C981758671}|MacropadApp\\MacropadApp.csproj|solutionrelative:macropadapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MacropadApp\\Views\\MainWindow.xaml",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "MacropadApp\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-18T07:19:04.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "MacropadApp\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T14:36:15.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAudioService.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\IAudioService.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\Services\\IAudioService.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\IAudioService.cs",
+              "RelativeToolTip": "MacropadApp\\Services\\IAudioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T06:54:09.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MacropadApp.csproj",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\MacropadApp.csproj",
+              "RelativeDocumentMoniker": "MacropadApp\\MacropadApp.csproj",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\MacropadApp.csproj",
+              "RelativeToolTip": "MacropadApp\\MacropadApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-18T07:58:59.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AudioService.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\AudioService.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\Services\\AudioService.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\AudioService.cs",
+              "RelativeToolTip": "MacropadApp\\Services\\AudioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T06:53:02.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\App.xaml.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\App.xaml.cs",
+              "RelativeToolTip": "MacropadApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-27T08:53:24.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MacropadApp\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T07:21:11.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SerialServices.cs",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\SerialServices.cs",
+              "RelativeDocumentMoniker": "MacropadApp\\Services\\SerialServices.cs",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\Services\\SerialServices.cs",
+              "RelativeToolTip": "MacropadApp\\Services\\SerialServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T00:00:20.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\App.xaml",
+              "RelativeDocumentMoniker": "MacropadApp\\App.xaml",
+              "ToolTip": "E:\\00-Project\\MacroPad\\MacropadApp\\MacropadApp\\App.xaml",
+              "RelativeToolTip": "MacropadApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-18T07:59:12.73Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
