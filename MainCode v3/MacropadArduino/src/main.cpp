@@ -9,6 +9,10 @@
 const int analogInputs[NUM_SLIDERS] = {A3, A2, A1, A9, A10, A0};
 const int MASTER_INDEX = 0; 
 
+// >>> TAMBAHAN: heartbeat, jaminan device tetap "bicara" meski slider diam
+unsigned long lastHeartbeat = 0;
+const unsigned long heartbeatInterval = 1000; // kirim minimal tiap 1 detik
+// <<< TAMBAHAN
 
 // ================== CLASS: OLEDDisplay =======================
 class OledController {
@@ -42,7 +46,7 @@ class OledController {
       }
 
       currentMode = BOOTING;
-      bootStep = 0;
+      bootStep = 0; 
       lastBootUpdate = millis();
       textX = -getPuntenWidth();
     }
@@ -218,7 +222,7 @@ class OledController {
       display.print(txt);
     }
 
-    // 🔹 Fungsi baru: teks satu baris di tengah (horizontal & vertikal)
+    // Fungsi baru: teks satu baris di tengah (horizontal & vertikal)
     void centerSingleLineText(const char* txt) {
       display.setTextSize(1);
       display.setTextColor(SSD1306_WHITE);
@@ -239,9 +243,10 @@ class SliderController {
     const int* pins;
     int values[NUM_SLIDERS];
     int lastValues[NUM_SLIDERS];
+    float filteredValues[NUM_SLIDERS];
     unsigned long lastReadTime;
     const unsigned long readInterval = 10; // ms
-    const int changeThreshold = 2; // ambang untuk deteksi perubahan
+    const int changeThreshold = 6; // ambang untuk deteksi perubahan
 
   public:
     SliderController(const int* inputPins, int count)
@@ -249,14 +254,17 @@ class SliderController {
       for (int i = 0; i < NUM_SLIDERS; i++) {
         values[i] = 0;
         lastValues[i] = 0;
+        filteredValues[i] = 0;
       }
     }
 
     void init() {
       for (int i = 0; i < numSliders; i++) {
         pinMode(pins[i], INPUT);
-        values[i] = analogRead(pins[i]);    // baca awal
-        lastValues[i] = values[i];
+        int raw = analogRead(pins[i]);
+        values[i] = raw;
+        lastValues[i] = raw;
+        filteredValues[i] = raw;
       }
       lastReadTime = millis();
     }
@@ -266,8 +274,13 @@ class SliderController {
       if (now - lastReadTime >= readInterval) {
         lastReadTime = now;
         for (int i = 0; i < numSliders; i++) {
-          // pembacaan mentah — kalau mau smoothing, ubah di sini
-          values[i] = analogRead(pins[i]);
+          int raw = analogRead(pins[i]);
+
+          // TAMBAHAN: exponential smoothing / low-pass filter
+          // 0.85 = seberapa "percaya" ke nilai lama, 0.15 = seberapa cepat ikut nilai baru
+          // makin besar angka pertama, makin halus tapi makin lambat responnya
+          filteredValues[i] = (filteredValues[i] * 0.85f) + (raw * 0.15f);
+          values[i] = (int)filteredValues[i];
         }
       }
     }
@@ -300,11 +313,21 @@ class SliderController {
     }
 
     // kirim semua nilai ke serial dalam format Deej "v1|v2|...|vN"
+    // void sendValues() {
+    //   String out = "";
+    //   for (int i = 0; i < numSliders; i++) {
+    //     out += String(values[i]);
+    //     if (i < numSliders - 1) out += "|";
+    //   }
+    //   Serial.println(out);
+    //   ackChanges(); // konfirmasi bahwa perubahan sudah dikirim
+    // }
+
     void sendValues() {
-      String out = "";
+      String out = "MACROPAD";
       for (int i = 0; i < numSliders; i++) {
+        out += "|";
         out += String(values[i]);
-        if (i < numSliders - 1) out += "|";
       }
       Serial.println(out);
       ackChanges(); // konfirmasi bahwa perubahan sudah dikirim
@@ -340,10 +363,20 @@ void loop() {
   // update baca semua slider (non-blocking di dalam kelas)
   sliders.update();
 
-  // jika ada perubahan di salah satu slider -> kirim semua nilai ke Deej
-  if (sliders.anyChanged()) {
-    sliders.sendValues(); // ini akan memanggil Serial.println("v1|v2|...|v6")
+  // // jika ada perubahan di salah satu slider -> kirim semua nilai ke Deej
+  // if (sliders.anyChanged()) {
+  //   sliders.sendValues(); // ini akan memanggil Serial.println("v1|v2|...|v6")
+  // }
+
+  // >>> UBAH: tambah kondisi heartbeatDue
+  bool changed = sliders.anyChanged();
+  bool heartbeatDue = (millis() - lastHeartbeat) >= heartbeatInterval;
+
+  if (changed || heartbeatDue) {
+    sliders.sendValues();
+    lastHeartbeat = millis();
   }
+  // <<< UBAH
 
   oled.update();
   

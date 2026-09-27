@@ -1,0 +1,11 @@
+# --- Konfigurasi untuk .NET (Aplikasi Desktop) ---
+**/bin/
+**/obj/
+*.exe
+*.dll
+
+# --- Konfigurasi untuk PlatformIO / Arduino ---
+**/.pio/
+**/.pioenvs/
+**/.piolibdeps/
+**/Build/

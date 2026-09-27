@@ -1,0 +1,14 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Resin_Blue
+Ka 0.000000 0.000000 0.000000
+Kd 0.670588 0.823529 0.945098
+Ks 0.330000 0.330000 0.330000
+
+newmtl Color_C04
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 0.600000 0.196078
+Ks 0.330000 0.330000 0.330000
+

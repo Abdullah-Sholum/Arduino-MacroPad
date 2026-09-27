@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MacropadApp": {
+      "commandName": "Project",
+      "debugEngines": "managed,native"
+    }
+  }
+}

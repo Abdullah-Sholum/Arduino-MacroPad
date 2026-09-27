@@ -46,7 +46,7 @@ class Display {
     const char* sliderLabels[6] = {
       "Premier / Mic",
       "Browser",
-      "Foobar",
+      "Brave",
       "Master",
       "Game",
       "Discord"
